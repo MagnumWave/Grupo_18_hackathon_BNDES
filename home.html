@@ -15,7 +15,7 @@
 </head>
 <body >
     <div class="container-fluid">
-        <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-default navbar-expand-lg ">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><b>Nome</b></a>  		
             </div>
@@ -26,7 +26,7 @@
                     <li><a href="./registro_cliente.html">About</a></li>
                 </ul>                
                 <ul class="nav navbar-nav navbar-right">			
-                    <li>
+                    <li >
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Login</a>
                         <ul class="dropdown-menu form-wrapper">					
                             <li>
@@ -46,22 +46,96 @@
                         </ul>
                         
                     </li>  
+                    <li >
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Registre-se</a>
+                        <ul class="dropdown-menu">					
+                            <li><a href="./registro_cliente.html" class="dropdown-link">Cliente</a></li>
+                            <li><a href="./registro_empresa.html" class="dropdown-link">Empresa</a></li>
+                        </ul>
+                    </li>
                     <li>
-                        <a href="./registro_cliente.html">Registre-se</a>
+                        <a data-toggle="" class="" href="#">Olá,Wander</a>
+                    </li>
+                    <li>
+                        <a data-toggle="" class="" href="#">Sair</a>
                     </li>                  
                 </ul>
             </div>
         </nav>
         <div class="estabelecimentos">
             <form class="filtroEstabelecimento">
+                <label style="padding-left: 10px;">Área</label>
                 <select name="select-localidade" class="ls-select" style="width:300px" data-search="false">
                     <option value="todas">Todas</option>
                     <option value="norte">Zona Norte</option>
                     <option value="oeste">Zona Oeste</option>
                     <option value="sul">Zona Sul</option>
                 </select>
+                <label style="padding-left: 10px;">Tipo</label>
+                <select name="select-tipo" class="ls-select" style="width:300px" data-search="false">
+                    <option value="todas">Todas</option>
+                    <option value="restaurante">Restaurantes</option>
+                    <option value="lanchonetes">Lanchonetes</option>
+                    <option value="sul">Zona Sul</option>
+                </select>
             </form>
-        </div>                
+        </br>
+            <table class="table table-light table-hover sortable" id="tabela">
+                <thead>
+                  <tr>
+                    <th scope="col" onclick="sortTable(0)" style="cursor: pointer;">Nome</th>
+                    <th scope="col" onclick="sortTable(1)" style="cursor: pointer;">Bairro</th>
+                    <th scope="col" >URL</th>
+                    <th scope="col" >Reservar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>autback</td>
+                    <td>Barra da Tijuca</td>
+                    <td></td>
+                    <td><a href="#" class="btn" data-toggle="modal" data-target="#basicModal">
+                        Click to open Modal
+                      </a></td>
+                  </tr>
+                  <tr>
+                    <td>Outback</td>
+                    <td>Barra da Tijuca</td>
+                    <td></td>
+                    <td><a href="#" class="btn" data-toggle="modal" data-target="#basicModal">
+                        Click to open Modal
+                      </a></td>
+                  </tr>
+                  <tr>
+                    <td>Outback</td>
+                    <td>Barra da Tijuca</td>
+                    <td></td>
+                    <td><a href="#" class="btn" data-toggle="modal" data-target="#basicModal">
+                        Click to open Modal
+                      </a></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>   
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">Basic Modal </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h3>Modal Body</h3>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn  btn-modal">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>             
     </div>
 </body>
 </html>

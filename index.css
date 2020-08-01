@@ -21,7 +21,7 @@
 }
 .navbar .navbar-brand b {
     font-weight: bold;
-    color: #fa7900;		
+    color: #33cabb;		
 }
 .navbar .form-inline {
     display: inline-block;
@@ -146,6 +146,14 @@
 .navbar .navbar-right .dropdown-toggle::after {
     display: none;
 }
+.dropdown-link{
+    color: #33cabb !important;
+}
+.btn-modal {
+    background-color: #33cabb;
+    color: white;
+}
+
 
 /* @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 html {
