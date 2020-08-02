@@ -1,6 +1,7 @@
 .container-fluid{
     padding-left: 0%;
     padding-right: 0%;
+    
 }
 
 .navbar {
@@ -43,7 +44,7 @@
 .navbar .nav .btn-primary:hover, .navbar .nav .btn-primary:focus {		
     color: #fff;
     outline: none;
-    background: #31bfb1;
+    background: #33cabb;
 }
 .navbar .navbar-right li:first-child a {
     padding-right: 30px;
@@ -94,12 +95,12 @@
 .navbar .dropdown-menu.form-wrapper a:hover{
     text-decoration: underline;
 }
-.navbar .form-wrapper .hint-text {
+.navbar .form-wrapper {
     text-align: center;
     margin-bottom: 15px;
     font-size: 13px;
 }
-.navbar .form-wrapper  .btn, .navbar .form-wrapper  .btn:hover {
+.navbar .form-wrapper  .btn .navbar .form-wrapper  .btn:hover {
     color: #fff;
     margin: 0;
     padding: 0 !important;
@@ -154,52 +155,10 @@
     color: white;
 }
 
-
-/* @import url("https://fonts.googleapis.com/css?family=Varela+Round");
-html {
-  box-sizing: border-box;
-  
-}
-
-
-nav{
-    background-color: dimgray;
-}
-.menu {
-  display: flex;
-  justify-content: center;
-
-
-  max-width: 1280px;
-  margin: 0 auto;
-
-  list-style: none;
-}
-
-.menu li {
-    width: 125px;
-    height: 50px;
-    transition: background-position-x 0.9s linear;
-    text-align: center;
-}
-.menu a {
-      font-size: 22px;
-      color: floralwhite;
-      text-decoration: none;
-      transition: all 0.45s;
-    }
-.menu li:hover{
-    
-    animation: line 1s;
-
-}
-.menu li:hover a{
-    color: #d94f5c;
-} */
-
 .formulario-cliente{
-    padding-right: 20em;
+    padding-right: 0em;
     padding-left: 20em;
+    max-width: 80%;
 }
 .hr-text {
     line-height: 1em;
@@ -232,5 +191,8 @@ nav{
       background-color: #fcfcfa;
 }
 .estabelecimentos{
-    padding:1em 12em 0em 12em;
+    padding:1em 10em 0em 10em;
+}
+.nav-pagination{
+    padding-left: 35%;
 }

@@ -7,11 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
-
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body >
     <div class="container-fluid">
@@ -19,7 +15,6 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><b>Nome</b></a>  		
             </div>
-            <!-- Collection of nav links, forms, and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="./home.html">Home</a></li>
@@ -44,40 +39,37 @@
                                 </form>
                             </li>
                         </ul>
-                        
-                    </li>  
-                    <li >
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Registre-se</a>
-                        <ul class="dropdown-menu">					
-                            <li><a href="./registro_cliente.html" class="dropdown-link">Cliente</a></li>
-                            <li><a href="./registro_empresa.html" class="dropdown-link">Empresa</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a data-toggle="" class="" href="#">Olá,Wander</a>
-                    </li>
-                    <li>
-                        <a data-toggle="" class="" href="#">Sair</a>
-                    </li>                  
-                </ul>
+                      </li> 
+                    <ul class="nav navbar-nav">
+                      <li><a href="./registro_cliente.html">Registre-se</a></li>
+                    </ul>    
+                    </ul>                            
+                
             </div>
         </nav>
         <div class="estabelecimentos">
             <form class="filtroEstabelecimento">
-                <label style="padding-left: 10px;">Área</label>
-                <select name="select-localidade" class="ls-select" style="width:300px" data-search="false">
-                    <option value="todas">Todas</option>
-                    <option value="norte">Zona Norte</option>
-                    <option value="oeste">Zona Oeste</option>
-                    <option value="sul">Zona Sul</option>
-                </select>
-                <label style="padding-left: 10px;">Tipo</label>
-                <select name="select-tipo" class="ls-select" style="width:300px" data-search="false">
-                    <option value="todas">Todas</option>
-                    <option value="restaurante">Restaurantes</option>
-                    <option value="lanchonetes">Lanchonetes</option>
-                    <option value="sul">Zona Sul</option>
-                </select>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label>Área</label>
+                        <select name="select-localidade" class="ls-select" style="width:200px" data-search="false">
+                            <option value="todas">Todas</option>
+                            <option value="norte">Zona Norte</option>
+                            <option value="oeste">Zona Oeste</option>
+                            <option value="sul">Zona Sul</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label >Tipo</label>
+                        <select name="select-tipo" class="ls-select" style="width:200px" data-search="false">
+                            <option value="todas">Todas</option>
+                            <option value="restaurante">Restaurantes</option>
+                            <option value="lanchonetes">Lanchonetes</option>
+                            <option value="sul">Zona Sul</option>
+                        </select>
+                    </div>
+                </div>
+                
             </form>
         </br>
             <table class="table table-light table-hover sortable" id="tabela">
@@ -116,7 +108,21 @@
                   </tr>
                 </tbody>
               </table>
+              <nav class="nav-pagination">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Próximo</a>
+                  </li>
+                </ul>
+              </nav>
         </div>   
+        
         <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -127,15 +133,53 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <h3>Modal Body</h3>
+                    <table class="table table-light table-hover sortable" id="tabela">
+                        <thead>
+                          <tr>
+                            <th scope="col" onclick="sortTable(0)" style="cursor: pointer;">Nome</th>
+                            <th scope="col" onclick="sortTable(1)" style="cursor: pointer;">Bairro</th>
+                            <th scope="col" >URL</th>
+                            <th scope="col" >Reservar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>autback</td>
+                            <td>Barra da Tijuca</td>
+                            <td></td>
+                            <td><a href="#" class="btn" data-toggle="modal" data-target="#basicModal">
+                                Modal
+                              </a></td>
+                          </tr>
+                          <tr>
+                            <td>Outback</td>
+                            <td>Barra da Tijuca</td>
+                            <td></td>
+                            <td><a href="#" class="btn" data-toggle="modal" data-target="#basicModal">
+                                Modal
+                              </a></td>
+                          </tr>
+                          <tr>
+                            <td>Outback</td>
+                            <td>Barra da Tijuca</td>
+                            <td></td>
+                            <td><a href="#" class="btn" data-toggle="modal" data-target="#basicModal">
+                                Modal
+                              </a></td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn  btn-modal">Save changes</button>
+                  <button type="button" class="btn  btn-modal">Save </button>
                 </div>
               </div>
             </div>
           </div>             
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../Javascript/index.js"></script>
 </body>
 </html>
