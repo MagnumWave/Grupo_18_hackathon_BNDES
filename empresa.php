@@ -29,7 +29,7 @@ $row2 = mysqli_fetch_assoc($resultCheck);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Bairro Buddy</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -43,13 +43,12 @@ $row2 = mysqli_fetch_assoc($resultCheck);
     <div class="container-fluid">
     <nav class="navbar navbar-default navbar-expand-lg ">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><b>Nome</b></a>  		
+                <a class="navbar-brand" href="./home.php"><b>Bairro Buddy</b></a>  		
             </div>
             <!-- Collection of nav links, forms, and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./registro_cliente.html">About</a></li>
+                    <li><a href="./home.php">Home</a></li>
                 </ul>                
                 <ul class="nav navbar-nav navbar-right">			
                     <li ><a data-toggle="dropdown" class="dropdown-toggle" href="#">Login</a>
@@ -99,40 +98,42 @@ $row2 = mysqli_fetch_assoc($resultCheck);
             </div>
         </nav>
     </div>
-    <table>
-            </thead>
-                <tr>
-                    <td>Campo</td>
-                    <td>Informação</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Nome: </td><td><?php echo $row["nome"]; ?></td>
-                </tr>
-                <tr>
-                    <td>Rua: </td><td><?php echo $row["rua"]; ?></td>
-                </tr>
-                <tr>
-                    <td>Nº: </td><td><?php echo $row["numero"]; ?></td>
-                </tr>
-                <tr>
-                    <td>Bairro: </td><td><?php echo $row["bairro"]; ?></td>
-                </tr>
-                <tr>
-                    <td>Cidade: </td><td><?php echo $row["cidade"]; ?></td>
-                </tr>
-                <tr>
-                    <td>Estado: </td><td><?php echo $row["estado"]; ?></td>
-                </tr>
-                <tr>
-                    <td>Site: </td><td><?php echo $row["site"]; ?></td>
-                </tr>
-                <tr>
-                    <td>Descrição: </td><td><?php echo $row["descricao"]; ?></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="resultados">
+        <table class="table table-light table-hover sortable">
+                </thead>
+                    <tr>
+                        <td>Campo</td>
+                        <td>Informação</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nome </td><td><?php echo $row["nome"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Rua </td><td><?php echo $row["rua"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Nº </td><td><?php echo $row["numero"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Bairro </td><td><?php echo $row["bairro"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Cidade </td><td><?php echo $row["cidade"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Estado </td><td><?php echo $row["estado"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Site </td><td><?php echo $row["site"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Descrição </td><td><?php echo $row["descricao"]; ?></td>
+                    </tr>
+                </tbody>
+            </table>
+    
         <!-- deve ser melhor mostrar essa lista horizontalmente -->
         <ul>
             <li>
@@ -165,5 +166,6 @@ $row2 = mysqli_fetch_assoc($resultCheck);
                 }
             ?>
         </ul>
+    </div>
     
 </body>
