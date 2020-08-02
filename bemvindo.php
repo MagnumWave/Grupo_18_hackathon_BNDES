@@ -1,4 +1,5 @@
 <?php 
+//ESSE ARQUIVO NÂO VAI SER USADO!!!
 //pega as variaveis
 $uvar = $_POST['uname'];
 $pwvar = $_POST['pwd'];
